@@ -34,11 +34,7 @@ class MasterViewController: UITableViewController {
         let url = NSURL(string: "http://msdevshow.com/archives.json")
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-            //println(NSString(data: data, encoding: NSUTF8StringEncoding))
             if(data != nil) {
-                //var parseError: NSError?
-                //let json = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                
                 do {
                     let jsonDict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! NSDictionary
                     
@@ -56,9 +52,6 @@ class MasterViewController: UITableViewController {
         }
         
         task.resume()
-        
-        //episodes.append(Episode(Title: "Episode 1"))
-        //episodes.append(Episode(Title: "Episode 2"))
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -70,13 +63,6 @@ class MasterViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-    func insertNewObject(sender: AnyObject) {
-        episodes.insert(NSDate(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }*/
 
     // MARK: - Segues
 
@@ -114,17 +100,5 @@ class MasterViewController: UITableViewController {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
-    /*
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            episodes.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
-*/
-
 }
 
