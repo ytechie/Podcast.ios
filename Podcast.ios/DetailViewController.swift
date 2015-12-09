@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
+    
+    private var player:AVPlayer?;
 
-
-    var detailItem: AnyObject? {
+    var detailItem: Episode? {
         didSet {
             // Update the view.
             self.configureView()
@@ -23,10 +25,15 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
-            }
+            title = detail.Title;
         }
+
+        /*
+        let url = NSURL(string: "http://traffic.libsyn.com/msdevshow/msdevshow_0084.mp3")
+        
+        player = AVPlayer(URL: url!)
+        player?.play()
+        */
     }
 
     override func viewDidLoad() {

@@ -14,6 +14,8 @@
 		0A3757B41C1667CA004BEB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3757B31C1667CA004BEB65 /* Assets.xcassets */; };
 		0A3757B71C1667CA004BEB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3757B51C1667CA004BEB65 /* LaunchScreen.storyboard */; };
 		0A3757C21C1667CA004BEB65 /* Podcast_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3757C11C1667CA004BEB65 /* Podcast_iosTests.swift */; };
+		0A3757CE1C1668B3004BEB65 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3757CD1C1668B3004BEB65 /* Episode.swift */; };
+		0A3757D01C166EEA004BEB65 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3757CF1C166EEA004BEB65 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		0A3757BD1C1667CA004BEB65 /* Podcast.iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Podcast.iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3757C11C1667CA004BEB65 /* Podcast_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast_iosTests.swift; sourceTree = "<group>"; };
 		0A3757C31C1667CA004BEB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A3757CD1C1668B3004BEB65 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		0A3757CF1C166EEA004BEB65 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		0A3757A91C1667CA004BEB65 /* Podcast.ios */ = {
 			isa = PBXGroup;
 			children = (
+				0A3757CC1C166894004BEB65 /* PodcastData */,
 				0A3757AA1C1667CA004BEB65 /* AppDelegate.swift */,
 				0A3757AC1C1667CA004BEB65 /* MasterViewController.swift */,
 				0A3757AE1C1667CA004BEB65 /* DetailViewController.swift */,
@@ -86,6 +91,7 @@
 				0A3757B31C1667CA004BEB65 /* Assets.xcassets */,
 				0A3757B51C1667CA004BEB65 /* LaunchScreen.storyboard */,
 				0A3757B81C1667CA004BEB65 /* Info.plist */,
+				0A3757CF1C166EEA004BEB65 /* Player.swift */,
 			);
 			path = Podcast.ios;
 			sourceTree = "<group>";
@@ -97,6 +103,14 @@
 				0A3757C31C1667CA004BEB65 /* Info.plist */,
 			);
 			path = Podcast.iosTests;
+			sourceTree = "<group>";
+		};
+		0A3757CC1C166894004BEB65 /* PodcastData */ = {
+			isa = PBXGroup;
+			children = (
+				0A3757CD1C1668B3004BEB65 /* Episode.swift */,
+			);
+			name = PodcastData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3757AF1C1667CA004BEB65 /* DetailViewController.swift in Sources */,
+				0A3757CE1C1668B3004BEB65 /* Episode.swift in Sources */,
 				0A3757AD1C1667CA004BEB65 /* MasterViewController.swift in Sources */,
+				0A3757D01C166EEA004BEB65 /* Player.swift in Sources */,
 				0A3757AB1C1667CA004BEB65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
