@@ -44,7 +44,7 @@ class MasterViewController: UITableViewController {
                     }
                     
                 } catch {
-                    
+                    //How do we handle errors if there is invalid JSON?
                 }
             }
             
